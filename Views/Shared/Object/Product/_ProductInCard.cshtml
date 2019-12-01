@@ -1,5 +1,4 @@
-﻿
-@model DomainProduct.Entities.Product
+﻿@model DomainProduct.Entities.Product
 
 @*
     reference: https://developers.google.com/search/docs/data-types/product
@@ -156,11 +155,20 @@
                         
                     </a>
                     -->
-                    <a data-tooltip="Comprar" href="@(Model.UrlFriendlyCustom != null ? Model.UrlFriendlyCustom : Model.UrlFriendly)" class="labeled icon action btn-comprar-card text uppercase" title="Comprar" data-idproduct="@Model.IdProduct" data-name="Model.Name">
                     <div class="center-buttons">
+                    <div class="buttons-icons cart-botao">
+                    <a data-tooltip="Comprar" href="@(Model.UrlFriendlyCustom != null ? Model.UrlFriendlyCustom : Model.UrlFriendly)" class="labeled icon action btn-comprar-card text uppercase" title="Comprar" data-idproduct="@Model.IdProduct" data-name="Model.Name">
                     <i id="btn-icon-card-@Model.IdProduct" class=" announcement inside-buttons comprar-verde"></i>
-                    </div>
                     </a>
+                    </div>
+                    <div class="buttons-icons coracao-botao">
+
+                    <div class="bcg-heart wishlist-btn" data-wishlist-local="card"  data-position="top right">
+                        <i class="coracao-verde wishlist-item icon heart @color" data-in-list="@inlist" data-have-sku="@(Model.AvailableReferences != null && Model.AvailableReferences.Count() > 0 ? "true" : "false")" data-product-id="@Model.IdProduct"></i>
+                    </div>
+
+                    </div>
+                    </div>
                 }
                 else if (Model.FlagExhausted || Model.Stock <= 0)
                 {
@@ -170,11 +178,24 @@
                         
                     </a>
                     -->
-                    <a data-tooltip="Avise-me" id="btn-comprar-card-@Model.IdProduct" title="Avise-me" class="labeled icon action btn-comprar-card text uppercase" data-idproduct="@Model.IdProduct" data-name="@Model.Name">
                     <div class="center-buttons">
+                    <div class="buttons-icons cart-botao">
+                    <a data-tooltip="Avise-me" id="btn-comprar-card-@Model.IdProduct" title="Avise-me" class="labeled icon action btn-comprar-card text uppercase" data-idproduct="@Model.IdProduct" data-name="@Model.Name">
                     <i id="btn-icon-card-@Model.IdProduct" class=" announcement inside-buttons comprar-verde"></i>
-                    </div>
                     </a>
+                    </div>
+
+                    <div class="buttons-icons coracao-botao">
+
+                    <div class="bcg-heart wishlist-btn" data-wishlist-local="card"  data-position="top right">
+                        <i class="coracao-verde wishlist-item icon heart @color" data-in-list="@inlist" data-have-sku="@(Model.AvailableReferences != null && Model.AvailableReferences.Count() > 0 ? "true" : "false")" data-product-id="@Model.IdProduct"></i>
+                    </div>
+
+                    </div>
+
+
+
+                    </div>
                 }
                 else if (Session["EventList"] != null)
                 {
@@ -184,11 +205,24 @@
                         
                     </a>
                     -->
-                    <a data-tooltip="Adicionar à Lista" id="add-event-list-@Model.IdProduct" title="Adicionar à Lista" class="labeled icon action btn-comprar-card text uppercase" data-idproduct="@Model.IdProduct" data-name="@Model.Name">
                     <div class="center-buttons">
+                    <div class="buttons-icons cart-botao">
+                    <a data-tooltip="Adicionar à Lista" id="add-event-list-@Model.IdProduct" title="Adicionar à Lista" class="labeled icon action btn-comprar-card text uppercase" data-idproduct="@Model.IdProduct" data-name="@Model.Name">
                     <i id="btn-icon-card-@Model.IdProduct" class=" add to cart inside-buttons comprar-verde"></i>
-                    </div>
                     </a>
+                    </div>
+
+                    <div class="buttons-icons coracao-botao">
+
+                    <div class="bcg-heart wishlist-btn" data-wishlist-local="card"  data-position="top right">
+                        <i class="coracao-verde wishlist-item icon heart @color" data-in-list="@inlist" data-have-sku="@(Model.AvailableReferences != null && Model.AvailableReferences.Count() > 0 ? "true" : "false")" data-product-id="@Model.IdProduct"></i>
+                    </div>
+
+                    </div>
+
+
+
+                    </div>
                 }
                 else
                 {
@@ -198,11 +232,23 @@
                         
                     </a>
                     -->
-                    <a data-tooltip="Comprar" id="btn-comprar-card-@Model.IdProduct" title="Comprar" class="labeled icon action btn-comprar-card text uppercase" data-idproduct="@Model.IdProduct" data-name="@Model.Name">
                     <div class="center-buttons">
+                    <div class="buttons-icons cart-botao">
+                    <a data-tooltip="Comprar" id="btn-comprar-card-@Model.IdProduct" title="Comprar" class="labeled icon action btn-comprar-card text uppercase" data-idproduct="@Model.IdProduct" data-name="@Model.Name">
                     <i id="btn-icon-card-@Model.IdProduct" class="icon add to cart inside-buttons comprar-verde"></i>
-                    </div>
                     </a>
+                    </div>
+
+                    <div class="buttons-icons coracao-botao">
+
+                    <div class="bcg-heart wishlist-btn" data-wishlist-local="card"  data-position="top right">
+                        <i class="coracao-verde wishlist-item icon heart @color" data-in-list="@inlist" data-have-sku="@(Model.AvailableReferences != null && Model.AvailableReferences.Count() > 0 ? "true" : "false")" data-product-id="@Model.IdProduct"></i>
+                    </div>
+
+                    </div>
+
+
+                    </div>
                 }
             </div> <!-- /////////////////////////////   FINAL SKU OPTIONS    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
             <div class="dados">

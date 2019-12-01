@@ -236,12 +236,21 @@
 
 }
 
+.redondo {
+  border-radius: 50% !important;
+}
+
+.sem-pad {
+  padding: 1em 0em 0em 0em !important;
+}
+
 .ui.form {
 
   .field {
 
     > .button {
       margin-bottom: 10px;
+   
     }
   }
 }

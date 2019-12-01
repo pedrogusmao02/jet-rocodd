@@ -10,7 +10,18 @@
       z-index: 10;
     }
   }
+  .acc-ultimo  {
+    grid-column: 4 / 6;
+  }
+  .grid-filtro  {
+    border: .5px solid #d5d5d5;
+    padding: 10px;
+  }
   .ui.accordion {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    
     .title {
       font-weight: bold;
       font-size: 14px;
@@ -19,6 +30,7 @@
       padding-left: 15px;
       box-shadow: inset 3px 0 0 #EEEEEE;
       margin-bottom: 10px;
+      
       &.active {
         border-top: 3px solid #EEEEEE;
         border-bottom: 3px solid #EEEEEE;

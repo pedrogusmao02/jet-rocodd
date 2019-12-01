@@ -1,3 +1,69 @@
+.center-buttons {
+  text-align: center;
+  position:  relative;
+  display: block;
+  padding-bottom: 30%;
+}
+
+
+.buttons-icons {
+  
+  height: 40px;
+  width: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+
+.fas {
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.fa-cart-plus {
+  color: white;
+}
+.fa-heart {
+  color: green;
+}
+
+.cart-botao {
+  background-color: #ff00ff;
+  opacity: 0.8;
+  color: white;
+  
+}
+
+.coracao-botao {
+background-color: #fff;
+opacity: 0.8;
+color: green;
+
+}
+
+.comprar-verde {
+  color: #fff;
+  font-size: 2em !important;
+  margin-top: 10px !important;
+}
+
+
+.coracao-verde {
+  color: green;
+  font-size: 2em !important;
+  margin-top: 10px !important;
+}
+
+
+
+
+
 .card.produto {
   box-shadow: none !important;
 
